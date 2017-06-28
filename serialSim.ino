@@ -29,8 +29,19 @@ void setup() {
     Serial.begin(9600);
     delay(500);
     Serial.println("Welcome to the simulator");
+    delay(500)
+
+    Serial.println("Providing telem fields");
+        Serial.println("ID, 1, Position");
+        Serial.println("ID, 2, Velocity");
+        Serial.println("ID, 3, Accel");
+        Serial.println("ID, 4, Tel1");
+        Serial.println("ID, 5, Tel2");
+        Serial.println("ID, 6, Tel3");
+    delay(500)
+    
     Serial.println("Entering stable state...");
-    delay(2000);
+    delay(1000);
 
     // Special loop to handle Stable state
     stableStateLoop();
