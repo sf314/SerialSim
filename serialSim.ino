@@ -29,7 +29,7 @@ void setup() {
     Serial.begin(9600);
     delay(500);
     Serial.println("Welcome to the simulator");
-    delay(500)
+    delay(500);
 
     Serial.println("Providing telem fields");
         Serial.println("ID, 1, Position");
@@ -38,8 +38,8 @@ void setup() {
         Serial.println("ID, 4, Tel1");
         Serial.println("ID, 5, Tel2");
         Serial.println("ID, 6, Tel3");
-    delay(500)
-    
+    delay(500);
+
     Serial.println("Entering stable state...");
     delay(1000);
 
