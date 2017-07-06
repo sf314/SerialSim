@@ -57,13 +57,6 @@ void loop() {
     // Keep time updated
     currentTime = millis() - startTime;
 
-    // Parse incoming commands
-    if (Serial.available()) {
-        char c = Serial.read();
-        parse(c);
-        Serial.println("Received " + c);
-    }
-
     // Main runloop
     if (1) {
         // Calculate physics
@@ -96,6 +89,13 @@ void loop() {
         }
 
         //nextState = // Systems stuff
+
+        // Listen for incoming commands (i.e. emergency signal)
+        if (Serial.available()) {
+            char c = Serial.read();
+            Serial.println("Received " + c);
+            parse(c);
+        }
 
         // Set next state
         currentState = nextState;
